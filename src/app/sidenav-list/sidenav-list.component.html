@@ -1,0 +1,29 @@
+<mat-nav-list>
+  <div class="list-group list-group-flush pl-2">
+    <div class="list-group-item" *ngFor='let answer of answers' mat-list-item (click)="onClose()" (click)="backToNode(answer.questionId)">
+      <div class="row">
+        <div class="col-auto">
+
+          <!-- Avatar -->
+          <div class="avatar avatar-sm">
+            <img src="assets/icons/arrow_right-24px.svg" width="32" height="32">
+          </div>
+
+        </div>
+        <div class="col ml-n2">
+
+          <!-- Heading -->
+          <p class="small mb-0">
+            <strong>
+              {{answer.questionLabel}}
+            </strong>
+          </p>
+          <!-- Text -->
+          <p class="small text-gray-700 mb-0">
+            {{answer.pickedAnswerLabel}}
+          </p>
+        </div>
+      </div> <!-- / .row -->
+    </div>
+  </div>
+</mat-nav-list>

@@ -1,0 +1,45 @@
+<!-- HEADER -->
+<div class="header">
+  <div class="container-fluid">
+    <!-- Body -->
+    <div class="header-body">
+      <div class="row align-items-end">
+        <div class="col-1">
+          <mat-toolbar>
+            <div class="fxHide gt-xs">
+              <a mat-icon-button (click)="onToggleSidenav()">
+                <mat-icon>menu</mat-icon>
+              </a>
+            </div>
+          </mat-toolbar>
+        </div>
+        <div class="col text-center mb-4">
+
+          <!-- Pretitle -->
+          <h6 class="header-pretitle">
+            interpreter
+          </h6>
+
+          <!-- Title -->
+          <h1 class="header-title">
+            Electrocardiogram
+          </h1>
+
+        </div>
+        <div class="col-auto btn" (click)="onResetTree()">
+
+          <!-- Button -->
+          <a href="#!">
+            <img src="assets/icons/arrow-clockwise.svg" width="32" height="32">
+          </a>
+          <br>
+          <h6 class="header-pretitle">
+            reset
+          </h6>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .header-body -->
+
+  </div>
+</div> <!-- / .header -->

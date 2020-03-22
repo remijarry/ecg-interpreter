@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <!-- Value  -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col">
+              <!-- Heading -->
+              <span class="h2 mb-0">
+                {{currentNode.question}}
+              </span>
+              <h1 *ngIf="isFinal(currentNode)" class="header-title"> What to do </h1>
+              <br>
+              <ul *ngIf='currentNode.description' class='description'>
+                <li class="header-pretitle mt-1" *ngFor='let details of currentNode.description'>
+                  {{details}}
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto">
+
+              <!-- Icon -->
+              <!-- <img src="assets/icons/question.svg" width="32" height="32"> -->
+
+            </div>
+          </div> <!-- / .row -->
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 col-xl" *ngFor='let answer of currentNode.answers'>
+      <!-- Value  -->
+      <div class="card" (click)="onClick(answer)">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col">
+              <!-- Heading -->
+              <span class="h2 mb-0">
+                {{answer.label}}
+              </span>
+            </div>
+          </div> <!-- / .row -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
